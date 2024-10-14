@@ -1,0 +1,864 @@
+a {
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('https://maraviyainfotech.com/projects/carrot/carrot-v2/carrot-html/assets/img/banner/banner.jpg'); /* Replace with your image URL */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 2rem;
+    border-radius: 8px;
+    height: 400px; 
+}
+
+.banner-content {
+    max-width: 50%;
+    color: white;
+}
+
+.banner-content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.banner-content h1 {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.banner-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.shop-now-button {
+    background-color: #6d9f44; 
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.shop-now-button:hover {
+    background-color: #5a8437; 
+}
+/* =======================catagory==================== */
+
+/* Container setup */
+.category-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* Sidebar styling */
+.category-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.category-item h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.category-item p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.category-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 1rem;
+  color: #6d9f44;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Promo section styling */
+.promo-cards {
+  display: flex;
+  gap: 1.5rem;
+  width: 75%;
+  align-items: stretch; /* Make cards stretch to full height */
+}
+
+.promo-card {
+  flex: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: white;
+  position: relative;
+  min-height: 350px; /* Adjust height based on your design */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.promo-discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.promo-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.shop-now-button {
+  background-color: #6d9f44;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.shop-now-button:hover {
+  background-color: #5a8437;
+}
+/* ============================================ */
+/* Main Container */
+.popular-product-container {
+  padding: 20px;
+  padding-top: 90px;
+}
+
+/* Top Section */
+.popular-product-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popular-product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popular-product-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Bottom Section */
+.popular-product-body {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar with Categories */
+.product-category-sidebar {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-category-item {
+  display: flex;
+  justify-content: space-between;  /* Ensures the arrow goes to the end */
+  align-items: center;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-category-item:hover {
+  background-color: #e0e0e0;
+}
+
+.product-category-item.active {
+  color: #28a745;
+}
+
+.product-view-more {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: #28a745;
+  font-weight: bold;
+}
+
+
+/* Product Section */
+.product-cards-section {
+  width: 80%;
+}
+
+/* Product Cards */
+.product-card-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card {
+  width: 30%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;  /* Ensures full height for the images */
+  object-fit: cover;  /* Keeps the image proportionate */
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.product-category {
+  font-size: 14px;
+  color: #888;
+}
+/* ========================================================== */
+/* Container Styling */
+.product-banner-container {
+  width: 100%;
+  padding:  80px 20px;
+}
+
+/* Banner Row */
+.banner-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual Banner Item */
+.banner-item {
+  position: relative;
+  width: 32%; /* Ensure 3 banners fit in one row */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner Image */
+.banner-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Banner Details */
+.banner-details {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.banner-details h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.banner-details p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.percent {
+  font-weight: bold;
+  font-size: 20px;
+  color: #28a745;
+}
+
+/* Shop Now Button */
+.shop-now-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.shop-now-button:hover {
+  background-color: #1e7d32;
+}
+/* ===================================================== */
+/* Container */
+.feature-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Feature Row */
+.feature-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Feature Item */
+.feature-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Styling */
+.icon-container i {
+  font-size: 50px; /* Customize size here */
+  margin-bottom: 15px;
+}
+
+/* Green Icon Color */
+.green-icon {
+  color: #4CAF50; /* Green color for icons */
+}
+
+/* Feature Title */
+.feature-item h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Feature Description */
+.feature-item p {
+  font-size: 14px;
+  color: #555;
+}
+/* ======================================================================= */
+/* OrganicDeal.css */
+
+/* Main container to hold text and image */
+/* Main container with the background image */
+.deal-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://maraviyainfotech.com/projects/carrot/carrot-v2/carrot-html/assets/img/deal/bg-deal.jpg'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  margin: 90px 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Text section with proper styling */
+.deal-text {
+  background: #f5885f1f; /* Add a slight background to enhance readability */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow for the text container */
+  max-width: 500px;
+  text-align: center;
+}
+
+.discount {
+  font-size: 20px;
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deal-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.deal-text p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Countdown timer styling */
+.countdown {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.countdown span {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* ============================================================= */
+.next-component-container {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+/* Product Section */
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-category {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.card-rating {
+  color: #f39c12;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.current-price {
+  color: #6d9f44;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Promo Banner Section */
+.promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.promo-image {
+  width: 50%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.promo-text {
+  width: 50%;
+}
+
+.promo-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.promo-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.shop-now-button {
+  padding: 0.5rem 1rem;
+  background-color: #6d9f44;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shop-now-button:hover {
+  background-color: #567f34;
+}
+/* =================================================== */
+/* Container */
+.testimonials-container {
+  padding: 80px 0;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.testimonials-description {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* Testimonial cards */
+.testimonials-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial-card {
+  width: 30%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: #888;
+}
+
+.testimonial-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.testimonial-quote {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.testimonial-rating {
+  font-size: 18px;
+  color: #ffa500;
+}
+/* ================================================= */
+/* Container */
+.latest-news-container {
+  text-align: center;
+  padding: 80px 0;
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.latest-news-description {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* News cards */
+.news-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-card {
+  width: 30%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-image {
+  position: relative;
+}
+
+.news-image img {
+  width: 100%;
+}
+
+.news-date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.news-date span:first-child {
+  font-size: 16px;
+  display: block;
+}
+
+.news-date span:last-child {
+  font-size: 12px;
+  display: block;
+}
+
+.news-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.news-category {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #333;
+}
+
+.read-more {
+  font-size: 14px;
+  color: #2db92d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+/* =================================Footer========================== */
+/* General Footer Styles */
+.footer {
+  background-color: #f2f2f2;
+  padding: 40px 20px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Company Info Styles */
+.company-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  color: #333; /* Dark Heading */
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  margin: 5px 0;
+  color: #777; /* Light Text */
+}
+
+/* Company Links & Categories Styles */
+.company-links, .categories {
+  flex: 1;
+  padding: 20px;
+}
+
+.company-links ul, .categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.company-links li, .categories li {
+  margin: 10px 0;
+  color: #777; /* Light Text */
+}
+
+.footer-heading {
+  font-size: 18px;
+  color: #333; /* Dark Heading */
+  margin-bottom: 15px;
+}
+
+/* Newsletter Styles */
+.newsletter {
+  flex: 1;
+  padding: 20px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: #777; /* Light Text */
+}
+
+.image-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.image-gallery img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  color: #777; /* Light Text */
+}

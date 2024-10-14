@@ -1,0 +1,45 @@
+/* Styles for the main app container */
+.app-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Button styling */
+.category-buttons button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+/* Card component styling */
+.card {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.card-price {
+  font-size: 1.1em;
+  color: #007bff;
+}
+
+.card .btn-primary {
+  margin-top: 10px;
+}

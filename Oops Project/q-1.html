@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+    <style>
+        .person-details {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <div id="person1" class="person-details"></div>
+    <div id="person2" class="person-details"></div>
+
+    <script>
+        class Person {
+            constructor(name, age, country) {
+                this.name = name;
+                this.age = age;
+                this.country = country;
+            }
+
+            displayDetails() {
+                return `Name: ${this.name}<br>Age: ${this.age}<br>Country: ${this.country}`;
+            }
+        }
+
+        const person1 = new Person('xyz', 25, 'USA');
+        const person2 = new Person('pqr', 20, 'IND');
+
+        const person1Div = document.getElementById('person1').innerHTML= `<strong>Person-1 Details:</strong><br>${person1.displayDetails()}`;
+        const person2Div = document.getElementById('person2').innerHTML=`<strong>Person-2 Details:</strong><br>${person2.displayDetails()}`;
+
+
+    </script>
+</body>
+</html>

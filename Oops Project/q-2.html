@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Operations</title>
+    <style>
+        .account-details {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bank Account Operations</h1>
+    <div id="account-details" class="account-details"></div>
+
+    <script>
+        class BankAccount {
+            constructor(accountNumber, balance) {
+                this.accountNumber = accountNumber;
+                this.balance = balance;
+            }
+
+            deposit(amount) {
+                this.balance += amount;
+                return amount;
+            }
+
+            withdraw(amount) {
+                if (this.balance >= amount) {
+                    this.balance -= amount;
+                    return amount;
+                } else {
+                    return "Insufficient balance";
+                }
+            }
+
+            getAccountDetails() {
+                return {
+                    accountNumber: this.accountNumber,
+                    balance: this.balance
+                };
+            }
+        }
+        const account = new BankAccount('212121212', 1500);
+
+        const deposited = account.deposit(500);
+        const withdrawn = account.withdraw(400);
+        const wantToWithdraw = account.withdraw(1800);
+
+        
+        const details = account.getAccountDetails();
+
+        const accountDiv = document.getElementById('account-details');
+        accountDiv.innerHTML = `
+            A/c No.: ${details.accountNumber}<br>
+            Opening Balance: ${1500}<br>
+            Deposited: ${deposited}<br>
+            Withdrawn: ${withdrawn}<br>
+            Account Balance: ${details.balance}<br>
+            Want to withdraw: 1800<br>
+            ${wantToWithdraw === "Insufficient balance" ? wantToWithdraw : `Account Balance: ${details.balance}`}
+        `;
+    </script>
+</body>
+</html>
