@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.js
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import TaskList from './components/TaskList';
+import AddTask from './components/AddTask';
+import EditTask from './components/EditTask';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tasks, setTasks] = useState([
+    { id: 1, title: 'JavaScript', description: 'Learn JavaScript', status: 'active' },
+    { id: 2, title: 'React', description: 'Learn React.js', status: 'inactive' },
+  ]);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div className="container mt-5">
+        <Routes>
+          <Route path="/" element={<TaskList tasks={tasks} setTasks={setTasks} />} />
+          <Route path="/add" element={<AddTask tasks={tasks} setTasks={setTasks} />} />
+          <Route path="/edit/:id" element={<EditTask tasks={tasks} setTasks={setTasks} />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
