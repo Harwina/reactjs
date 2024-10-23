@@ -1,0 +1,33 @@
+/* App.css */
+.status-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.bg-green, .bg-red {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.form-select{
+  margin-left: 10px;
+}
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-buttons .btn {
+  min-width: 70px;
+}
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
