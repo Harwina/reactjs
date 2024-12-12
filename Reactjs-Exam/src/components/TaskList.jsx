@@ -1,4 +1,3 @@
-// src/components/TaskList.jsx
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -9,19 +8,29 @@ const TaskList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const handleLogout = (id) => {
+    dispatch({ type: "LOGOUT" });
+  };
   const handleDelete = (id) => {
     dispatch({ type: "DELETE_TASK", payload: id });
   };
 
   const handleAddTask = () => {
-    navigate("/add"); // Navigate to AddTask page
+    navigate("/add");
+  };
+
+  const handleEdit = (id) => {
+    navigate(`/edit/${id}`);
   };
 
   return (
     <div className="page-container">
-      <h1 className="page-title">Task List</h1>
+      <h1 className="page-title">Todo List</h1>
+      <button className="form-button logout-button" onClick={handleLogout}>
+        Logout
+      </button>
       <div className="button-container">
-        <button className="form-button" onClick={handleAddTask}>
+        <button className="btn-primary" onClick={handleAddTask}>
           Add New Task
         </button>
       </div>
@@ -48,9 +57,14 @@ const TaskList = () => {
                 <td>{task.status}</td>
                 <td>{task.deadline}</td>
                 <td>
-                  <button className="edit-button">Edit</button>
                   <button
-                    className="delete-button"
+                    className="btn-secondary"
+                    onClick={() => handleEdit(task.id)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn-danger"
                     onClick={() => handleDelete(task.id)}
                   >
                     Delete

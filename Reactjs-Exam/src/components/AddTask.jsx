@@ -1,4 +1,3 @@
-// src/components/AddTask.jsx
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +19,7 @@ const AddTask = () => {
       setTask("");
       setStatus("");
       setDeadline("");
-      navigate("/tasks"); // Redirect to TaskList page after adding a task
+      navigate("/tasks");
     } else {
       alert("Please fill in all fields!");
     }
@@ -36,7 +35,8 @@ const AddTask = () => {
             type="text"
             value={task}
             onChange={(e) => setTask(e.target.value)}
-            placeholder="Enter task description"
+            placeholder="Enter Task"
+            className="form-input"
           />
         </div>
         <div className="form-group">
@@ -45,7 +45,8 @@ const AddTask = () => {
             type="text"
             value={status}
             onChange={(e) => setStatus(e.target.value)}
-            placeholder="Enter task status (e.g., Pending, Ongoing)"
+            placeholder="Enter Status"
+            className="form-input"
           />
         </div>
         <div className="form-group">
@@ -54,9 +55,10 @@ const AddTask = () => {
             type="datetime-local"
             value={deadline}
             onChange={(e) => setDeadline(e.target.value)}
+            className="form-input"
           />
         </div>
-        <button className="form-button" onClick={handleAddTask}>
+        <button className="btn-primary" onClick={handleAddTask}>
           Add Task
         </button>
       </div>
